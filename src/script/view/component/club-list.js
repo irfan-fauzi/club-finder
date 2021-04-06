@@ -7,7 +7,16 @@ class ClubList extends HTMLElement{
     this.render();
   }
 
-  render(){
+  renderError(message){
+    this.innerHTML = "";
+    this.innerHTML += `
+    <h2 class="placeholder">${message}</h2>
+    `
+  }
+  
+  render(){  
+    
+    this.innerHTML = "";
     this._dataClub.forEach(data => {
 
       const clubElement = document.createElement("club-item");
@@ -18,6 +27,8 @@ class ClubList extends HTMLElement{
 
     })
   }
+
+  
 }
 
 customElements.define('club-list', ClubList);

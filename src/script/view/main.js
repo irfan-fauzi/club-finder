@@ -7,7 +7,7 @@ const main = () => {
   // seleksi custom element
   const searchElement = document.querySelector("search-bar");
   // seleksi bukan custom element
-  const clubListElement = document.querySelector("#clubList");
+  const clubListElement = document.querySelector("club-list");
   
   // aksi ketika tombol search di klik :
   
@@ -25,21 +25,12 @@ const main = () => {
 
   // fungsi ketika DataSOurce menghasilkan data pencarian 
   const renderResult = results => {
-    // clubListElemen di isi kosong supaya tidak createElement terus menerus
-    clubListElement.innerHTML = "";
-
-    // membuat element clubList yang sudah didefinisikan di class ClubList
-    const clubList = document.createElement('club-list');
-    // class ClubList memanggil method set dataClub yang di inisialisasi dan di isi oleh result (data pencarian)
-    clubList.dataClub = results;
-    // menaruh element clubList di dalam clubListElement
-    clubListElement.appendChild(clubList);
+    clubListElement.dataClub = results;
   };
 
   // fungsi ketika promise reject / data pencarian tida ditemukan
   const fallbackResult = message => {
-    clubListElement.innerHTML = "";
-    clubListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`
+    clubListElement.renderError(message)
   };
 
   // buttonSearchElement.addEventListener("click", onButtonSearchClicked);

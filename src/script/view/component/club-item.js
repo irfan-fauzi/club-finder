@@ -6,7 +6,7 @@ class ClubItem extends HTMLElement{
   }
   
   render(){
-
+    
     this.innerHTML = `
     <img class="fan-art-club" src=${this._dataclubs.fanArt} alt="Fan Art">
     <div class="club-info">
