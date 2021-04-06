@@ -1,7 +1,9 @@
-.app-bar {
+app-bar {
+    /* default custom element = inline */
+    display: block;
     padding: 16px;
     width: 100%;
     background-color: cornflowerblue;
-    color: white;
+    color: rgb(223, 212, 212);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
