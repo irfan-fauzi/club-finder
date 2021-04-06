@@ -39,10 +39,10 @@ const main = () => {
     //     </div>`;
     //   clubListElement.appendChild(clubElement);
     // })
-    const clubListContainer = document.querySelector('#clubList');
+    clubListElement.innerHTML = "";
     const clubList = document.createElement('club-list');
     clubList.dataClub = results;
-    clubListContainer.appendChild(clubList);
+    clubListElement.appendChild(clubList);
   };
 
   const fallbackResult = message => {
