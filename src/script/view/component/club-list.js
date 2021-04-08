@@ -2,6 +2,11 @@ import './club-item.js';
 
 class ClubList extends HTMLElement{
 
+  // constructor(){
+  //   super();
+  //   this._shadowRoot = this.attachShadow({mode: "open"});
+  // }
+
   set dataClub(data){
     this._dataClub = data;
     this.render();
