@@ -48,10 +48,10 @@ class ClubItem extends HTMLElement{
 
     </style>
 
-    <img class="fan-art-club" src=${this._dataclubs.fanArt} alt="Fan Art">
+    <img class="fan-art-club" src=${this._dataclubs.strTeamFanart1} alt="Fan Art">
     <div class="club-info">
-      <h2>${this._dataclubs.name}</h2>
-      <p>${this._dataclubs.description}</p>
+      <h2>${this._dataclubs.strTeam}</h2>
+      <p>${this._dataclubs.strDescriptionEN}</p>
     </div>
     
     `;
